@@ -9,22 +9,19 @@
   <body>
     <script>
 
-function prizeDistrubtion(award, results) {
+      function prizeDistrubtion(award, results) {
+      let currentWinningTeam = "";
+      const scoreTracker = new Map();
+      scoreTracker.set(currentWinningTeam, 0);
 
+       for (const index in competitions) {
+          const result = results[index];
+        console.log(teamWhoWon)
 
-let currentWinningTeam = "";
+      updateScores(teamWhoWon, 3, scoreTracker)
 
-  const scoreTracker = new Map();
-  scoreTracker.set(currentWinningTeam, 0);
-
-  for (const index in competitions) {
-    const result = results[index];
-    console.log(teamWhoWon)
-
-    updateScores(teamWhoWon, 3, scoreTracker)
-
-    console.log(scoreTracker)
-  }
+      console.log(scoreTracker)
+    }
   return currentWinningTeam;
 }
 
@@ -38,10 +35,8 @@ function updateScores(awardWon, points, scoreTracker) {
 
 console.log(
   prizeDistrubtion(
-  
   )
 );
-
       };
     </script>
   </body>
